@@ -477,6 +477,13 @@
                         console.log('Oops! Something went wrong. Mail was not sent!', error);
                         alert("Oops! Something went wrong. Mail was not sent!");
                     });
+
+                    emailjs.sendForm('service_9xcv8da', 'template_txoq328', this)
+                    .then(() => {
+                        console.log('Email Sent. Will reach you shortly!'); 
+                    }, (error) => {
+                        console.log('Oops! Something went wrong. Mail was not sent!', error); 
+                    });
             });
         }
     </script>

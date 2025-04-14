@@ -471,18 +471,18 @@
                 console.log('Sending email...');
                 emailjs.sendForm('service_9xcv8da', 'template_bvpkn5p', this)
                     .then(() => {
-                        console.log('Email Sent. Will reach you shortly!');
+                        console.log('Email Sent to Admin successfully!');
                         alert("Email Sent. Will reach you shortly!");
                     }, (error) => {
-                        console.log('Oops! Something went wrong. Mail was not sent!', error);
+                        console.log('Oops! Something went wrong. Mail was not sent to admin!', error);
                         alert("Oops! Something went wrong. Mail was not sent!");
                     });
 
                     emailjs.sendForm('service_9xcv8da', 'template_txoq328', this)
                     .then(() => {
-                        console.log('Email Sent. Will reach you shortly!'); 
+                        console.log('Email Sent to Requestor successfully!'); 
                     }, (error) => {
-                        console.log('Oops! Something went wrong. Mail was not sent!', error); 
+                        console.log('Oops! Something went wrong. Response Mail was not sent!', error); 
                     });
             });
         }

@@ -11455,7 +11455,7 @@ pre .code {
     font-family: 'Amsterdam';
     font-style: normal;
     font-weight: normal;
-    src: local('Amsterdam'), url('./vendors/Amsterdam.woff') format('woff');
+    src: local('Amsterdam'), url('Amsterdam.woff') format('woff');
 }
 
 }

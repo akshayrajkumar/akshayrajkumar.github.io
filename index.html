@@ -18,7 +18,18 @@
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
- 
+ <style>
+    @font-face {
+    font-family: 'Amsterdam';
+    font-style: normal; 
+    src: url('Amsterdam.woff') format("woff");
+}
+
+#brandname {
+  font-family: 'Amsterdam';
+}
+
+ </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -61,7 +72,7 @@
                 <ul class="navbar-nav brand">
                     <img src="assets/imgs/avatar.jpg" alt="" class="brand-img">
                     <li class="brand-txt">
-                        <h5 class="brand-title">Akshay Rajkumar</h5>
+                        <h5 class="brand-title" id="brandname">Akshay Rajkumar</h5>
                         <div class="brand-subtitle">SAP ABAP Developer</div>
                     </li>
                 </ul>

@@ -11450,17 +11450,6 @@ pre .code {
   color: #888;
 }
 
-  @font-face {
-    font-family: 'Amsterdam';
-    font-style: normal;
-    font-weight: normal;
-    src: url('Amsterdam.woff');
-}
-.brand-title {
-font-family: 'Amsterdam';
-}
-
-
 @media (max-width: 991.98px) {
   .navbar .brand {
     display: none;

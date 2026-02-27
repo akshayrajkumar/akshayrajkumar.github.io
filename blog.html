@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Akshay Rajkumar</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/johndoe.css">
+    <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+ <style>
+    @font-face {
+    font-family: 'Amsterdam';
+    font-style: normal; 
+    src: url('Amsterdam.woff') format("woff");
+    font-size: small;
+}
+
+#brandname {
+  font-family: 'Amsterdam';
+}
+
+ </style> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Akshay Rajkumar - SAP ABAP Blog">
+    <meta name="author" content="Akshay Rajkumar">
+    <title>Blog | Akshay Rajkumar</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- Prism CSS for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <style>
+        .blog-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 80px 15px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .blog-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .blog-header p {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .blog-post {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+        
+        .blog-post-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .blog-post-content {
+            padding: 30px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        .blog-meta i {
+            margin-right: 5px;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .blog-post h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .blog-post h2 a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-post h2 a:hover {
+            color: #4CAF50;
+        }
+        
+        .blog-excerpt {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .read-more:hover {
+            background: #45a049;
+            color: white;
+        }
+        
+        /* Full Blog Post Styles */
+        .full-post {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .post-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .post-content {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #444;
+        }
+        
+        .post-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .post-content h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .post-content ul, .post-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .post-content li {
+            margin-bottom: 10px;
+        }
+        
+        .post-content blockquote {
+            border-left: 4px solid #4CAF50;
+            padding: 15px 25px;
+            margin: 25px 0;
+            background: #f9f9f9;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .post-content pre {
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .post-content code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+        
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: background 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            background: #555;
+            color: white;
+        }
+        
+        .tags {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 13px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .share-buttons {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .share-button {
+            display: inline-block;
+            padding: 8px 20px;
+            margin-right: 10px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .share-button:hover {
+            opacity: 0.8;
+            color: white;
+        }
+        
+        .share-twitter {
+            background: #1DA1F2;
+        }
+        
+        .share-linkedin {
+            background: #0077B5;
+        }
+        
+        .share-facebook {
+            background: #1877F2;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="akshayrajkumar.github.io/index.html#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="akshayrajkumar.github.io/index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="akshayrajkumar.github.io/index.html#resume" class="nav-link">Resume</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="assets/imgs/avatar.jpg" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title" id="brandname">Akshay Rajkumar</h5>
+                        <div class="brand-subtitle">SAP ABAP Developer</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                   <!--
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+					-->
+                    <li class="nav-item last-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                
+                    <li class="nav-item last-item">
+                        <a href="index.html/#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog List Section -->
+    <section id="blog-list" style="display: block;">
+        <div class="blog-container">
+            <div class="blog-header">
+                <h1>My Blog</h1>
+                <p>Insights, tutorials, and thoughts on SAP ABAP development</p>
+            </div>
+
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800" alt="SAP ABAP REST API" class="blog-post-image">
+                <div class="blog-post-content">
+                    <span class="blog-category">SAP ABAP</span>
+                    <div class="blog-meta">
+                        <span><i class="ti-calendar"></i> February 6, 2025</span>
+                        <span><i class="ti-time"></i> 15 min read</span>
+                        <span><i class="ti-user"></i> Akshay Rajkumar</span>
+                    </div>
+                    <h2><a href="#" onclick="showPost('post1'); return false;">Building High-Performance REST APIs in SAP ECC with ICF Handlers</a></h2>
+                    <p class="blog-excerpt">
+                        Learn how to build scalable REST APIs in SAP ECC using ICF handlers to handle millions of records with cursor-based pagination. 
+                        This comprehensive guide covers database design, ABAP implementation, and performance optimization techniques for enterprise-scale APIs.
+                    </p>
+                    <a href="#" onclick="showPost('post1'); return false;" class="read-more">Read More <i class="ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="CDS Views" class="blog-post-image">
+                <div class="blog-post-content">
+                    <span class="blog-category">ABAP on HANA</span>
+                    <div class="blog-meta">
+                        <span><i class="ti-calendar"></i> January 28, 2025</span>
+                        <span><i class="ti-time"></i> 10 min read</span>
+                        <span><i class="ti-user"></i> Akshay Rajkumar</span>
+                    </div>
+                    <h2><a href="#" onclick="showPost('post2'); return false;">Mastering CDS Views for Performance Optimization</a></h2>
+                    <p class="blog-excerpt">
+                        Discover how to leverage Core Data Services (CDS) views to dramatically improve query performance in S/4HANA. 
+                        Includes practical examples of annotations, associations, and best practices for ABAP on HANA development.
+                    </p>
+                    <a href="#" onclick="showPost('post2'); return false;" class="read-more">Read More <i class="ti-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800" alt="OData Services" class="blog-post-image">
+                <div class="blog-post-content">
+                    <span class="blog-category">Integration</span>
+                    <div class="blog-meta">
+                        <span><i class="ti-calendar"></i> January 15, 2025</span>
+                        <span><i class="ti-time"></i> 12 min read</span>
+                        <span><i class="ti-user"></i> Akshay Rajkumar</span>
+                    </div>
+                    <h2><a href="#" onclick="showPost('post3'); return false;">Creating OData Services in SAP Gateway: A Complete Guide</a></h2>
+                    <p class="blog-excerpt">
+                        Step-by-step tutorial on creating, implementing, and testing OData services using SAP Gateway. 
+                        Learn about entity sets, function imports, and how to expose SAP data to modern web and mobile applications.
+                    </p>
+                    <a href="#" onclick="showPost('post3'); return false;" class="read-more">Read More <i class="ti-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Full Blog Post 1 -->
+    <section id="post1" style="display: none;">
+        <div class="blog-container">
+            <a href="#" onclick="showBlogList(); return false;" class="back-to-blog"><i class="ti-arrow-left"></i> Back to Blog</a>
+            
+            <article class="full-post">
+                <span class="blog-category">SAP ABAP</span>
+                <div class="blog-meta">
+                    <span><i class="ti-calendar"></i> February 6, 2025</span>
+                    <span><i class="ti-time"></i> 15 min read</span>
+                    <span><i class="ti-user"></i> Akshay Rajkumar</span>
+                </div>
+                
+                <h1 class="post-title">Building High-Performance REST APIs in SAP ECC with ICF Handlers</h1>
+                
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200" alt="SAP ABAP REST API" style="width: 100%; border-radius: 8px; margin: 30px 0;">
+                
+                <div class="post-content">
+                    <p>
+                        In modern enterprise architectures, REST APIs have become the de facto standard for system integration. 
+                        However, building scalable APIs in SAP ECC that can handle millions of records while maintaining performance 
+                        requires careful architectural decisions and optimization techniques.
+                    </p>
+
+                    <h3>The Challenge: 140 Million Records</h3>
+                    <p>
+                        Recently, I worked on a project where we needed to expose pricing data from SAP ECC to a Liferay portal. 
+                        The challenge? We had 140 million records spread across 9 brands, with weekly data volatility. 
+                        The existing implementation made 18 API calls per sync, resulting in frequent timeouts and poor user experience.
+                    </p>
+
+                    <blockquote>
+                        "The key to scaling isn't just about handling more data—it's about designing systems that remain 
+                        efficient as data grows exponentially." - Architecture Principle
+                    </blockquote>
+
+                    <h3>Solution Architecture</h3>
+                    <p>
+                        We redesigned the API using a three-tier approach:
+                    </p>
+                    <ul>
+                        <li><strong>Pre-calculated Snapshot Table:</strong> Weekly batch job stores pricing data in ZPRICING_SNAPSHOT</li>
+                        <li><strong>Cursor-based Pagination:</strong> Stable cursors enable resumable data transfer</li>
+                        <li><strong>ICF Handler Implementation:</strong> Custom REST endpoint with IF_HTTP_EXTENSION interface</li>
+                    </ul>
+
+                    <h4>1. Database Design</h4>
+                    <p>
+                        The foundation of any high-performance API is proper database design. Here's our Z-table structure:
+                    </p>
+
+<pre><code class="language-abap">@EndUserText.label : 'Pricing Snapshot for REST API'
+@AbapCatalog.tableCategory : #TRANSPARENT
+
+DEFINE TABLE ZPRICING_SNAPSHOT {
+  KEY CLIENT    : MANDT;
+  KEY BRAND     : CHAR3;
+  KEY MATNR     : MATNR;
+  KEY KUNNR     : KUNNR;
+  
+  MAKTX         : MAKTX;
+  KBETR         : KBETR_KOND;
+  WAERS         : WAERS;
+  CHANGE_TSTMP  : TIMESTAMP;
+  RECORD_STATUS : CHAR1;
+}</code></pre>
+
+                    <p>
+                        Notice the composite key (CLIENT, BRAND, MATNR, KUNNR) which aligns with our cursor pagination strategy. 
+                        The CHANGE_TSTMP field is crucial for delta sync capabilities.
+                    </p>
+
+                    <h4>2. Critical Indexes</h4>
+                    <p>
+                        Without proper indexes, even the best API design will fail. We created three strategic indexes:
+                    </p>
+
+<pre><code class="language-abap">* Index 1: Delta Query Optimization
+INDEX ZPS_IDX1 ON ZPRICING_SNAPSHOT
+  FIELDS: BRAND CHANGE_TSTMP MATNR KUNNR.
+
+* Index 2: Pagination Cursor Optimization  
+INDEX ZPS_IDX2 ON ZPRICING_SNAPSHOT
+  FIELDS: BRAND MATNR KUNNR CHANGE_TSTMP.</code></pre>
+
+                    <p>
+                        Index ZPS_IDX2 is the hero here—it enables sequential reads for pagination, reducing random I/O by 95%.
+                    </p>
+
+                    <h4>3. ICF Handler Implementation</h4>
+                    <p>
+                        The REST API handler implements cursor-based pagination using a simple but powerful pattern:
+                    </p>
+
+<pre><code class="language-abap">METHOD fetch_pricing_data.
+  DATA: lv_cursor_brand TYPE mvgr1,
+        lv_cursor_matnr TYPE matnr,
+        lv_cursor_kunnr TYPE kunnr.
+
+  * Decode cursor if provided
+  IF iv_cursor IS NOT INITIAL.
+    decode_cursor(
+      EXPORTING iv_cursor = iv_cursor
+      IMPORTING ev_brand  = lv_cursor_brand
+                ev_matnr  = lv_cursor_matnr
+                ev_kunnr  = lv_cursor_kunnr ).
+  ENDIF.
+
+  * Fetch with cursor-based WHERE clause
+  SELECT *
+    FROM zpricing_snapshot
+    WHERE brand = @iv_brand
+      AND record_status = 'A'
+      AND ( brand > @lv_cursor_brand OR
+            ( brand = @lv_cursor_brand AND matnr > @lv_cursor_matnr ) OR
+            ( brand = @lv_cursor_brand AND matnr = @lv_cursor_matnr 
+              AND kunnr > @lv_cursor_kunnr ) )
+    ORDER BY brand, matnr, kunnr
+    INTO TABLE @et_data
+    UP TO @iv_limit ROWS.
+
+  * Generate next cursor
+  IF lines( et_data ) = iv_limit.
+    READ TABLE et_data INDEX iv_limit INTO DATA(ls_last).
+    ev_next_cursor = encode_cursor(
+      iv_brand = ls_last-brand
+      iv_matnr = ls_last-matnr
+      iv_kunnr = ls_last-kunnr ).
+  ENDIF.
+ENDMETHOD.</code></pre>
+
+                    <h3>Performance Results</h3>
+                    <p>
+                        The optimized API delivered impressive results:
+                    </p>
+                    <ul>
+                        <li>150,000 records per page (4.6 MB compressed with GZIP)</li>
+                        <li>933 total pages for 140M records</li>
+                        <li>31 minutes for complete sync (vs. previous timeout issues)</li>
+                        <li>Memory usage: ~300 MB per request (well within SAP work process limits)</li>
+                    </ul>
+
+                    <h4>JSON Response Structure</h4>
+                    <p>
+                        The API returns material-centric data with nested customer pricing:
+                    </p>
+
+<pre><code class="language-json">{
+  "materialInfo": [
+    {
+      "MATNR": "000000000090233030",
+      "MAKTX": "MAC Viper AirFX Beam Hybrid",
+      "BRAND": "MRT",
+      "authAccountsWithPrice": [
+        {"account": "0000123456", "price": "492.25"},
+        {"account": "0000789012", "price": "498.50"}
+      ]
+    }
+  ],
+  "nextCursor": "MRT|000000000090233030|0000789012|20260206123045"
+}</code></pre>
+
+                    <h3>Key Takeaways</h3>
+                    <ol>
+                        <li><strong>Pre-calculation wins:</strong> Weekly snapshots eliminate real-time calculation overhead</li>
+                        <li><strong>Indexes are mandatory:</strong> Without proper indexes, 140M records = disaster</li>
+                        <li><strong>Cursor pagination scales:</strong> Unlike offset-based pagination, cursors maintain O(1) performance</li>
+                        <li><strong>GZIP compression matters:</strong> 87% size reduction (35 MB → 4.6 MB) drastically improves network transfer</li>
+                        <li><strong>Plan for parallelization:</strong> After HANA migration, parallel requests can reduce sync time to ~8 minutes</li>
+                    </ol>
+
+                    <h3>Conclusion</h3>
+                    <p>
+                        Building high-performance REST APIs in SAP ECC requires a holistic approach—from database design and indexing 
+                        to ABAP implementation and network optimization. The cursor-based pagination pattern proved crucial for handling 
+                        enterprise-scale data volumes while maintaining sub-second response times.
+                    </p>
+
+                    <p>
+                        In the next article, I'll dive deeper into optimizing this pattern for S/4HANA using CDS views and HANA-specific features.
+                    </p>
+
+                    <div class="tags">
+                        <strong>Tags:</strong>
+                        <span class="tag">SAP ABAP</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Performance Optimization</span>
+                        <span class="tag">ICF Handler</span>
+                        <span class="tag">Cursor Pagination</span>
+                        <span class="tag">Enterprise Architecture</span>
+                    </div>
+
+                    <div class="share-buttons">
+                        <strong>Share this article:</strong><br><br>
+                        <a href="https://twitter.com/intent/tweet?text=Building%20High-Performance%20REST%20APIs%20in%20SAP%20ECC&url=https://akshayrajkumar.github.io/blog.html" 
+                           target="_blank" class="share-button share-twitter">
+                            <i class="ti-twitter-alt"></i> Twitter
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://akshayrajkumar.github.io/blog.html" 
+                           target="_blank" class="share-button share-linkedin">
+                            <i class="ti-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://akshayrajkumar.github.io/blog.html" 
+                           target="_blank" class="share-button share-facebook">
+                            <i class="ti-facebook"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Full Blog Post 2 - Placeholder -->
+    <section id="post2" style="display: none;">
+        <div class="blog-container">
+            <a href="#" onclick="showBlogList(); return false;" class="back-to-blog"><i class="ti-arrow-left"></i> Back to Blog</a>
+            
+            <article class="full-post">
+                <span class="blog-category">ABAP on HANA</span>
+                <h1 class="post-title">Mastering CDS Views for Performance Optimization</h1>
+                <p class="blog-excerpt">Coming soon...</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Full Blog Post 3 - Placeholder -->
+    <section id="post3" style="display: none;">
+        <div class="blog-container">
+            <a href="#" onclick="showBlogList(); return false;" class="back-to-blog"><i class="ti-arrow-left"></i> Back to Blog</a>
+            
+            <article class="full-post">
+                <span class="blog-category">Integration</span>
+                <h1 class="post-title">Creating OData Services in SAP Gateway: A Complete Guide</h1>
+                <p class="blog-excerpt">Coming soon...</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-light">
+                © <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
+            </p>
+        </div>
+    </footer>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- JohnDoe js -->
+    <script src="assets/js/johndoe.js"></script>
+
+    <!-- Prism JS for code highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-abap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+
+    <script>
+        function showPost(postId) {
+            // Hide blog list
+            document.getElementById('blog-list').style.display = 'none';
+            
+            // Hide all posts
+            document.getElementById('post1').style.display = 'none';
+            document.getElementById('post2').style.display = 'none';
+            document.getElementById('post3').style.display = 'none';
+            
+            // Show selected post
+            document.getElementById(postId).style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function showBlogList() {
+            // Hide all posts
+            document.getElementById('post1').style.display = 'none';
+            document.getElementById('post2').style.display = 'none';
+            document.getElementById('post3').style.display = 'none';
+            
+            // Show blog list
+            document.getElementById('blog-list').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
